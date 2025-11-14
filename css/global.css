@@ -1,0 +1,628 @@
+/*body*/
+.html, body {
+    height: 100%;
+    width: 100%;
+    background-color:rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+}
+/*body*/
+
+
+/*faceLogo*/
+.facelogo2{
+    width: 40%;
+}
+
+.facelod{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+/*faceLogo*/
+
+
+/*booton*/
+a{
+    text-decoration: none;
+    cursor: pointer; /* Добавляет курсор руки, если нужно */
+    color: rgb(255, 255, 255);
+}
+/*booton*/
+
+
+
+/*HomePage*/
+.HomePage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+.logo{
+    height:30%;
+    width: 25%;
+    margin: 1% 0;
+}
+/*HomePage*/
+
+
+
+/*Font*/
+p{
+    margin: 1% 0;
+    font-size: 250% ;
+    font-family: 'MyFont', sans-serif;
+}
+
+p1{
+    font-size: 200% ;
+    font-family: 'MyFont', sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+p2{
+    font-size: 150% ;
+    font-family: 'MyFont', sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+p3{
+    font-size: 300% ;
+    font-family: 'MyFont', sans-serif;
+    
+}
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('fonts/Inder-Regular.ttf'), format('truetype');
+}
+/*Font*/
+
+
+
+/*object*/
+.bascetOBJ {
+    width: 70%;  /* Сделал фиксированный размер */
+    height: 70%;
+    background-color: rgb(255, 255, 255); /* Цвет круга */
+    border-radius: 50%; /* Круг */
+    display: flex;
+    align-items: center; /* Центрирование по вертикали */
+    justify-content: center; /* Центрирование по горизонтали */
+}
+/*object*/
+
+
+
+/*Shapka*/
+.shapka{
+    display: flex;
+    justify-content: space-between; /* Равномерное распределение элементов */
+    align-items: center; /* Выравнивание по вертикали */
+    height: 7%;
+    width: 100%;
+    background-color:#141414;
+    margin: 0;
+    padding: 0;
+}
+
+.logo1{
+    height: 80%;
+}
+
+.bascet{
+    height: 100%;
+    width: 4%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 3%;
+}
+
+.bascetICON{
+    width: 55%; /* Размер иконки относительно родителя */
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 3%;
+}
+/*Shapka*/
+
+
+
+/*Cataloge*/
+.cataloge{
+    display: flex;
+}
+
+.product{
+    height: 100%;
+    width: 65%;
+}
+
+.idproduct{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*Cataloge*/
+
+
+
+/*product*/
+.productid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 93%;
+}
+
+.productID1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+
+.productID1png{
+    height: 70%;
+}
+
+.btn.Size {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 120%;
+    font-family: 'MyFont', sans-serif;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.btn.active.Size {
+    background-color: black;
+    color: white;
+}
+
+.size{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.checkout-btn {
+    color: white;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'MyFont', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: #333;
+}
+
+.cart-notification {
+    display: none;
+    background-color: #006400;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 15px;
+    font-family: 'MyFont', sans-serif;
+    font-size: 14px;
+}
+
+.cart-notification.show {
+    display: block;
+}
+
+.cart-notification.size-warning {
+    background-color: #8B0000;
+}
+/*product*/
+
+
+/*Carousel*/
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 93vh; /* Take up the remaining viewport height after the 7% header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-item {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.8s ease-in-out;
+}
+
+.carousel-item.active {
+    z-index: 10;
+    transform: scale(1.2);
+}
+
+.carousel-item.prev,
+.carousel-item.next {
+    opacity: 0.7;
+    transform: scale(0.8);
+}
+
+.carousel-item.prev {
+    transform: translateX(-70%) scale(0.8);
+}
+
+.carousel-item.next {
+    transform: translateX(70%) scale(0.8);
+}
+
+.product-image {
+    max-width: 450px;
+    max-height: 450px;
+    transition: all 0.8s ease-in-out;
+}
+
+.carousel-item.active .product-image {
+    max-width: 650px;
+    max-height: 650px;
+}
+
+.product-info {
+    text-align: center;
+    color: black; /* Change text color to black since background is now white */
+    margin-top: 20px;
+}
+
+.product-price {
+    display: none;
+}
+
+.carousel-item.active .product-price {
+    display: block;
+}
+
+.carousel-nav {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.nav-dot.active {
+    background-color: white;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    user-select: none;
+}
+
+.carousel-arrow.left {
+    left: 20px;
+}
+
+.carousel-arrow.right {
+    right: 20px;
+}
+/*Carousel*/
+
+
+/*Cart Page*/
+.cart-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cart-page h1 {
+    font-family: 'MyFont', sans-serif;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.cart-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.cart-item-image {
+    width: 200px;
+    height: 200px;
+}
+
+.cart-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.cart-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cart-item-title {
+    font-family: 'MyFont', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cart-item-size {
+    font-family: 'MyFont', sans-serif;
+    font-size: 14px;
+    color: #666;
+}
+
+.cart-item-price {
+    font-family: 'MyFont', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.cart-item-quantity input {
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    border: none;
+    font-family: 'MyFont', sans-serif;
+    font-size: 16px;
+}
+
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: #f0f0f0;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.cart-checkout {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.checkout-button {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-family: 'MyFont', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout-button:hover {
+    background: #333;
+}
+/*Cart Page*/
+
+
+/*Order Page*/
+.order-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.order-page h1 {
+    font-family: 'MyFont', sans-serif;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.order-container {
+    display: flex;
+    gap: 40px;
+}
+
+.order-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-family: 'MyFont', sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'MyFont', sans-serif;
+    font-size: 14px;
+}
+
+.form-group.checkbox {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.form-group.checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+.order-summary {
+    width: 300px;
+}
+
+.order-item {
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    gap: 15px;
+}
+
+.order-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-details h3 {
+    font-family: 'MyFont', sans-serif;
+    font-size: 16px;
+    margin: 0 0 8px 0;
+}
+
+.item-details p {
+    font-family: 'MyFont', sans-serif;
+    font-size: 14px;
+    color: #666;
+    margin: 4px 0;
+}
+
+.order-footer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.continue-btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-family: 'MyFont', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.continue-btn:hover {
+    background: #333;
+}
+/*Order Page*/
+
+
+/*FaceLogo Animation*/
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+.facelogo2 {
+    width: 40%;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.facelod {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+/*FaceLogo Animation*/
+
+
+
+
